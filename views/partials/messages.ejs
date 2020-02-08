@@ -1,0 +1,14 @@
+<% if (error.length > 0) { %>
+    <div class="message-box error">
+    <% for (mes of error) { %>
+        <p><%= mes %></p>
+    <% } %>
+    </div>
+<% } %>    
+<% if (success.length > 0) { %>
+    <div class="message-box success">
+    <% for (s of success) { %>
+        <p><%= s %></p>
+    <% } %>
+    </div>
+<% } %>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="/style.css">
+    <script>
+        $(document).ready(function(){
+            $(".message-box").fadeOut(3000)
+        });
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            
+            <%- include ('./partials/messages') %>
+
+            <div class="model">
+                <h3>Register</h3>
+                <div class="box">
+                    <form action="/register" method="POST">
+                        <input type="text" name="name" placeholder="Full Name" autocomplete="off" required>
+                        <input type="email" name="email" placeholder="Email" autocomplete="off" rquired>
+                        <input type="password" name="password" placeholder="Password" required>
+                        <input type="password" name="password2" placeholder="Retype password" required>
+                        <input type="submit" value="Register">
+                    </form>
+                </div>
+                <p><a href="/">Already have an account <em>login here!</em></a></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

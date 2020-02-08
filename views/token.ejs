@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        $(".message-box").fadeOut(3000);
+      });
+    </script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="content">
+        <%- include ('./partials/messages') %>
+        <div class="model">
+          <h3>Enter your secret token</h3>
+          <div class="box">
+            <form action="reset_password/<%= user.email %>" method="POST">
+              <input
+                type="text"
+                name="token"
+                placeholder="Enter your secret token"
+                autocomplete="off"
+              />
+              <input type="submit" value="Submit" />
+            </form>
+          </div>
+          <p><a href="/login">Go to the LogIn page</a></p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
